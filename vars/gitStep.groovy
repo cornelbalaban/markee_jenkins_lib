@@ -1,6 +1,6 @@
 #! /usr/bin/env groovy
 
-import com.markee.jenkins_lib.*
+import com.markee.jenkins_lib.GitTool
 
 def call(String stepName, Map options) {
     echo "Starting " + stepName
