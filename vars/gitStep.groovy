@@ -3,7 +3,7 @@
 import com.markee.jenkins_lib.GitTool
 
 def call(String stepName) {
-    echo "Starting " + stepName
+    sh "echo ${stepName}}"
 
     def gitTool = new GitTool()
     gitTool.pullFromGit()
