@@ -2,7 +2,7 @@
 
 import com.markee.jenkins_lib.GitTool
 
-def call(String stepName, Map options) {
+def call(String stepName) {
     echo "Starting " + stepName
 
     def gitTool = new GitTool()
