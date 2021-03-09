@@ -1,18 +1,9 @@
 #! /usr/bin/env groovy
+import com.markee.jenkins_lib.*
 
 def call(String stepName, Map options) {
     echo "Starting " + stepName
 
-    pullFromGit(options, options.repoUrl)
-}
-
-
-def pullFromGit(Map credentials,String repoUrl) {
-    echo "Pulling from GIT"
-
-    if (credentials.userName == null) {
-        echo "No user or pwd for private repo"
-        error("Aborting build")
-    }
-
+    def gitTool = new GitTool()
+    gitTool.pullFromGit()
 }
