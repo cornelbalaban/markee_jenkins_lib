@@ -4,12 +4,12 @@ def call() {
     script.withEnv {
         (["test=blah"])
     }
-
+    echo "${test}"
     try {
         sh "gradle build"
     } catch(Exception e) {
       echo "Exception ${e.localizedMessage}"
-        echo "$test"
+
     }
 
 }
