@@ -4,7 +4,7 @@ def call() {
     try {
         sh "./gradlew build"
     } catch(Exception e) {
-      echo "${e.printStackTrace()}"
+      System.out.println("${e.localizedMessage}")
     }
 
 }
