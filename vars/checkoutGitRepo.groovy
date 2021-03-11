@@ -1,7 +1,7 @@
 def call() {
     echo "Checking out git repo"
 
-    echo "export test=blah"
+    sh "export test=blah"
     echo "${$test}"
     try {
         sh "gradle build"
