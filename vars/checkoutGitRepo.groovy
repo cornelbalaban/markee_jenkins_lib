@@ -1,4 +1,10 @@
 def call() {
     echo "Checking out git repo"
-    sh "./gradlew build"
+
+    try {
+        sh "./gradlew build"
+    } catch(Exception e) {
+      echo "${e.printStackTrace()}"
+    }
+
 }
