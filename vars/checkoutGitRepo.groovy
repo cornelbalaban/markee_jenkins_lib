@@ -2,7 +2,7 @@ def call() {
     echo "Checking out git repo"
 
     try {
-        sh "./gradlew build"
+        sh "gradle build"
     } catch(Exception e) {
       echo "${e.localizedMessage}"
     }
